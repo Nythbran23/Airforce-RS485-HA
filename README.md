@@ -8,7 +8,7 @@ The Adaptor Serial Port was set up with the following parameters:
 
 ![MODBUS TCP SETTINGS](https://user-images.githubusercontent.com/122684847/213724273-dcb0594c-0bda-4f3c-82aa-1280b36f9bdd.jpg)
 
-You need to choose a suitable IP address for the adaptor to suit your network (in my case 192.168.2.90) and intput it into the Local IPConfig menu.
+You need to choose a suitable IP address for the adaptor to suit your network (in my case 192.168.2.90) and input it into the Local IPConfig menu.
 
 Once connected I recommend you download the Radzio! Modbus Simulator to a PC on the same network to test.
 Entering the settings as shown below (adjusting the IP address to the one you chose above) and with the Controller powered up you should see data streaming OK from the holding registers:

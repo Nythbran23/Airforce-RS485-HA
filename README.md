@@ -5,25 +5,30 @@ This provides a working yaml code to copy into your configuration.yaml in Home A
 This code is based on the use of a RS485 to Network adaptor (elc rsether used for testing) set up as a TCP server.
 Connection to the Future Energy Wind Turbine Controller is via a twisted pair to the RS485 terminals.
 The Adaptor Serial Port was set up with the following parameters:
-![MODBUS TCP SETTINGS](https://user-images.githubusercontent.com/122684847/213724273-dcb0594c-0bda-4f3c-82aa-1280b36f9bdd.jpg)
-You need to choose a suitable IP address for the adaptor to suit your network (in my case 19.168.2.90)
 
-Once connected I rcommend you download the Radzio! Modbus Simulator to a PC on the same network to test.
-Entering the settings as shown below (adjusting the IP address to the one you hose above) and with the Controller powered up you should see data streaming OK to the holding registers:
+![MODBUS TCP SETTINGS](https://user-images.githubusercontent.com/122684847/213724273-dcb0594c-0bda-4f3c-82aa-1280b36f9bdd.jpg)
+
+You need to choose a suitable IP address for the adaptor to suit your network (in my case 19.168.2.90) and intput it into the IPCONFIG menu.
+
+Once connected I recommend you download the Radzio! Modbus Simulator to a PC on the same network to test.
+Entering the settings as shown below (adjusting the IP address to the one you chose above) and with the Controller powered up you should see data streaming OK from the holding registers:
+
 ![MODBUS RADZIO TCP SETTINGS](https://user-images.githubusercontent.com/122684847/213724993-385df463-8522-4b97-96ad-e0d7dbc8d8f9.jpg)
 
 Once the data flow is proved then you can add the .yaml code below to your configuration.yaml in Home Assistant. Adjust the IP address to be the same as you have set up and used above and reboot.
 
 The holding registers are designated thus by the Contoller:
+
 ![WT-Holding Registers](https://user-images.githubusercontent.com/122684847/213725473-eaf67e09-65ac-4d57-9842-725c3712e844.jpg)
 
 The initial commit code below will read:
-Battery Voltage (the voltage the controller is seeing)
-Turbine Current
-Turbine Power
-Turbine Speed
-Windspeed
-Wind Direction
+
+Battery Voltage (the voltage of the battery the controller is connected to - in my case nominal 48V)
+Turbine Current A
+Turbine Power W
+Turbine Speed RPM
+Windspeed MPS
+Wind Direction Deg
 
 It is hoped to extend this to add additional indicators for alarms, power generation totals etc.
 

@@ -27,7 +27,7 @@ Battery Voltage (the voltage of the battery the controller is connected to - in 
 Turbine Current A
 Turbine Power W
 Turbine Speed RPM
-Windspeed MPS
+Average Windspeed MPS
 Wind Direction Deg
 
 It is hoped to extend this to add additional indicators for alarms, power generation totals etc.
